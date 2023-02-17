@@ -46,7 +46,7 @@ y = (iris.target != 0) * 1
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 
-model = LogisticRegression(lr=0.1, num_iter=300000)
+model = LogisticRegression(learning_rate=0.01, num_iterations=100000)
 model.fit(X_train, y_train)
 
 y_pred = model.predict(X_test)
